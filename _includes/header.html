@@ -1,0 +1,43 @@
+<header class="container-fluid">
+    <div class="desktop-menu row between-row">
+       <div class="logo col">
+            <a href="{{ site.baseurl }}">
+                  <img src="{{ "/img/epic-cash-logo.png" | prepend: site.baseurl | replace: '//', '/' }}" alt="Epic Cash Logo"-->
+            </a>
+       </div>
+       <nav class="col menu-items">
+           <ul>
+               <li><a href="/downloads.html">Downloads</a></li>
+               <li><a href="/community.html">Community</a></li>
+           </ul>
+       </nav>
+    </div>
+    <div class="mobile-menu">
+        <div class="logo col">
+                <a href="{{ site.baseurl }}">
+                  <img src="{{ "/img/epic-cash-logo.png" | prepend: site.baseurl | replace: '//', '/' }}" alt="Epic Cash Logo"-->
+                </a>
+        </div>
+        <div class="side-nav">
+                <nav {% if site.reverse == true %}id="nav-left"{% else %}id="nav2"{% endif %}>
+                    <div id="nav-list">
+                        <div class="tabs">
+                           <div class="tab">
+                                <label class="tab-label"><a href="/downloads.html" target="_blank">Downloads</a></label>
+                            </div>
+                            <div class="tab">
+                                <label class="tab-label"><a href="/community.html" target="_blank">Community</a></label>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+        </div>
+        <a {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
+	  	<div id="menu">
+	  	    <span></span>
+            <span></span>
+            <span></span>
+	  	</div>
+	  </a>
+    </div>
+</header>

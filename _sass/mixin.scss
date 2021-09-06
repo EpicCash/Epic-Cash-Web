@@ -1,0 +1,54 @@
+// -- Mixins -- //
+
+// Nav menu
+
+@mixin icon-position($position) {
+	display: block;
+    position: absolute;
+    top: 1.7rem;
+    #{$position}: 1.5rem;
+    z-index: 10;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background: none;
+    @media (max-width: 30rem) {
+        top: 1.5rem;
+        right: 1rem;
+  }
+}
+
+@mixin open($x) {
+	-webkit-transform: translateX($x);
+     -moz-transform: translateX($x);
+      -ms-transform: translateX($x);
+          transform: translateX($x);
+  width: 100%;
+  @media (min-width: 62rem) {
+    width: 40%;
+  }
+}
+
+@mixin nav-position($position) {
+	width: 14rem;
+    position: fixed;
+    overflow-y: auto;
+    background-color: #222227;
+    top: 0;
+    bottom: 0;
+    #{$position}: -14rem;
+    color: $background-color;
+    -webkit-transition: all 0.3s ease-in;
+     -moz-transition: all 0.3s ease-in;
+      -ms-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in;
+    z-index: 1;
+    padding: 6rem 0;
+    text-align: left;
+    @media screen and (max-width: 62rem) {
+        min-height: 100vh;
+        #nav-list {
+            background-color: #222227;
+            padding-bottom: 4rem;
+        }
+    }
+}

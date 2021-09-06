@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+	<div id="wrap">
+
+      
+
+    <!-- Main content -->
+
+			{{ content }}
+
+	    <!-- Script -->
+      {% include script.html %}
+      
+      <script type="text/javascript" src="../js/fullpage.js"></script>
+      <script type="text/javascript">
+            var myFullpage = new fullpage('#fullpage', {
+                menu: '#myMenu',
+                navigation: true,
+                navigationPosition: 'right',     
+                showActiveTooltip: false,
+                lockAnchors: false,
+                responsiveWidth: 1200,
+                licenseKey: '52E4ADBF-39894FF5-844CF5AE-D7EC065F'
+            });
+      </script>
+
+	</div>
+</body>
+</html>
