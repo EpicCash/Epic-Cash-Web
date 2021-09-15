@@ -18,7 +18,7 @@ body {
 #wrap {
 	min-height:100%; 
 	position:relative;
-    background: $background;
+    background: #0d0d0d;
 }
 
 // Header
@@ -421,7 +421,7 @@ footer {
 // Home Page - Hero
 
 #hero {
-    background-image: url(../img/epic-burst-main.png), url(../img/epic-burst-cubes.png), url(../img/hero-gradient.png);
+    background-image: url(../img/epic-burst-main-upd.png), url(../img/epic-burst-cubes.png), url(../img/hero-gradient.png);
     background-size: 60rem, 20rem, cover;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: right center, left center, center center;
@@ -526,6 +526,16 @@ footer {
                 font-size: 1.3rem;
             }
         }
+    }
+    .col.logo {
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+        max-width: 30%;
+    }
+    .col.menu-items {
+        -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+        max-width: 70%;
     }
 }
 
@@ -896,6 +906,7 @@ footer {
 // Sample page
 
 .content {
+    background-color: #121215;
     .section {
         padding-top: 10rem;
         padding-bottom: 10rem;
@@ -942,6 +953,21 @@ footer {
                 transition: none;
                 &:hover {
                     border-bottom: 2px dotted $gold;
+                }
+            }
+            a.btn {
+                border: 2px solid $gold;
+                padding: 1rem;
+                display: inline-block;
+                vertical-align: baseline;
+                -webkit-transition: all .3s ease;
+                -moz-transition: all .3s ease;
+                -ms-transition: all .3s ease;
+                -o-transition: all .3s ease;
+                transition: all .3s ease;
+                &:hover {
+                    border-bottom: 2px solid $gold;
+                    background-color: #1b1b1f;
                 }
             }
         }
@@ -1487,5 +1513,80 @@ footer {
                 }
             }
         }
+    }
+}
+
+#blanco {
+    padding-top: 0;
+    .blanco-file {
+        -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+        max-width: 49%;
+        border: none;
+        background-color: #1b1b1f;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        line-height: 1;
+        @media screen and (max-width: 62rem) {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+        &:hover, &:active, &:focus {
+            background-color: #222227;
+        }
+        .inner {
+            box-sizing: border-box;
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: flex;
+            -ms-flex: 0 1 auto;
+            -webkit-box-flex: 0;
+            flex: 0 1 auto;
+            -ms-flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-align: center;
+            -webkit-box-align: center;
+            align-items: center;
+            i {
+                color: $gold;
+                font-size: 2rem;
+                margin-right: 1rem;
+                box-sizing: border-box;
+                -ms-flex: 0 0 auto;
+                -webkit-box-flex: 0;
+                flex: 0 0 auto;
+                -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
+                -webkit-box-flex: 1;
+                flex-grow: 1;
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                max-width: 3rem;
+            }
+            p {
+                font-size: 1rem;
+                box-sizing: border-box;
+                -ms-flex: 0 0 auto;
+                -webkit-box-flex: 0;
+                flex: 0 0 auto;
+                -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
+                -webkit-box-flex: 1;
+                flex-grow: 1;
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+    }
+    .embedpdf {
+        width: 100%;
     }
 }
