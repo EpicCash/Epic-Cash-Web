@@ -1,0 +1,153 @@
+---
+layout: default
+title: Signatures | Epic Private Internet Cash | A Peer-to-Peer Electronic Cash System
+image: /img/twitter-card-home.jpg
+permalink: /signatures/index.html
+---
+<div class="content post">
+   <div class="section frame page-hero">
+        <div class="row">
+            <div class="col">
+                <h1>Signatures</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section frame postwrap">
+        <div class="row center-row">
+            <div class="col postbody">
+                <h2>Table of Contents</h2>
+                <div id="text-table-of-contents">
+                    <ul class="menu">
+                        <li><a href="#org14b224f">1. Getting our key</a></li>
+                        <li><a href="#org5a9111d">2. Verifying our packages</a></li>
+                        <li><a href="#orgab476fa">3. Our key</a></li>
+                    </ul>
+                </div>
+                <p>Brick Abode has GPG-signed the Epic binaries.</p>
+            </div>
+            <div class="col postbody" id="org14b224f">
+                <h2>1. Getting our key</h2>
+                <p>Our PGP key is at the bottom of this file.  However, you can also find it on the public key servers, either by id:</p>
+                <div class="code"><pre class="example">$ gpg --receive-keys E8C092AC9674D578FCA90511EE3CA062DFE1B3FC</pre></div>
+                <p>or by address:</p>
+                <div class="code"><pre class="example">
+$ gpg -k epiccash@brickabode.com
+pub   rsa3072 2019-08-31 [SC]
+      E8C092AC9674D578FCA90511EE3CA062DFE1B3FC
+uid           [ unknown] Epic Cash &lt;epiccash@brickabode.com&gt;
+sub   rsa3072 2019-08-31 [E]
+</pre></div>
+            </div>
+            <div class="col postbody" id="org5a9111d">
+                <h2>2. Verifying our packages</h2>
+                <p>Once you’ve imported our key, you can check the signatures on our binary:</p>
+                <div class="code"><pre class="example">
+$ gpg --verify epic.zip.sig epic.zip
+gpg: Signature made Mon Sep  2 19:24:34 2019 -03
+gpg:                using RSA key E8C092AC9674D578FCA90511EE3CA062DFE1B3FC
+gpg: Good signature from "Epic Cash &lt;epiccash@brickabode.com&gt;" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: E8C0 92AC 9674 D578 FCA9  0511 EE3C A062 DFE1 B3FC
+</pre></div>
+                <p>Do likewise for all Epic binaries.</p>
+            </div>
+            <div class="col postbody" id="orgab476fa">
+                <h2>3. Our key</h2>
+                <p>To import our key, cat this file info the command “gpg –import”:</p>
+                <div class="code"><pre class="example">
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+io74Pok1FWazuouSf0N6
+=4055
+-----END PGP PUBLIC KEY BLOCK-----
+</pre></div>
+                <p>Here’s how it should look:</p>
+                <div class="code"><pre>
+$ cat &lt;&lt; EOF | gpg --import
+&gt; -----BEGIN PGP PUBLIC KEY BLOCK-----
+&gt; 
+&gt; mQGNBF1p15wBDADEQHVUBsxjs5SkvO4jd9L+U2We0V/x7dZvYKmrXHMfLtosCWeA
+&gt; esppvfe7YEbGHs5dit6QPRv73laFej6tzczFNbTLQAo1ls7HxQLPJnIkHdnbfVu5
+&gt; i3u4w/Hfx1dWGGQQAuZ9PKuJONYIiTth1ukrrnvM7oTAuyJpArqn0UNTLcwFcHJq
+&gt; VH1mRp2MkvG076a2wM4WCYRQz9VrkGogAui2ESmSWiu6NP0fTMKn1KgL2rk6ehcK
+&gt; byKK6YiVrqWC7UYql/SxrsQvPmOTOR880dCC6qo4tcDTjX2/d8oL016uqJWAqm9z
+&gt; IPff3Vo1VnN3NNuZVRRm4WgwdR7U9Voh/vHgvmcQrrSlmxch6BaODmpESTOTflly
+&gt; n/vyTM5z4TIYXNkw5rnDhwQtaNEkjMUy/ZwLhw5Qp3+AU0rBbmI8CDC45fggwAg6
+&gt; g+kkpjl+Im4DAkMeEduI/4bJQQ2HzuPmWmJrqMbZH+49Jbwqa36PC2chhQPl120j
+&gt; PvPVXbKnMM+4uSUAEQEAAbQjRXBpYyBDYXNoIDxlcGljY2FzaEBicmlja2Fib2Rl
+&gt; LmNvbT6JAc4EEwEKADgWIQTowJKslnTVePypBRHuPKBi3+Gz/AUCXWnXnAIbAwUL
+&gt; CQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRDuPKBi3+Gz/BeOC/0dqDACNbvgx4dI
+&gt; n+INo4hdYuwRecHtrLV95ac04M1jCWf+r23Ta8mM4tT1cf8fDYPHEtUZVfIv8UHi
+&gt; giMO/Uk/bEUmGfggaQ7kwzhHT93ZHzUD7Q/tNarVaReE36CTWP3yODS0lBP4eW6O
+&gt; 79LHvFFgBHkgS0eJLfUO3nnucJpBGMsQHuwtxfqCIFCY7xRTUyvJRfzYUnExLpDs
+&gt; pNVs+tbRdtCALSmEVhFVj0xBA2ddgQYCXaO+4j5Dov6cEWXARRecbZ11900JZeX6
+&gt; 9JSH7d53ZQD0YuAXoZKOuFVc0C4LFK0KXDexRKZG1QacjiC73b1yOjrrNQswIP3c
+&gt; hVavs2WMeOm9XJUq6tRzQaFDkQUwZsJMriQGZMWTZOSJ7JCpe+aN3kpbVET+49IC
+&gt; /4cgYjAwuSYqdGec/ILRG9Ep8UhGv4iFFFcnY2dMz9a4xv5SZNTa3ZlxDwm1hKmK
+&gt; /iW1modsV2MQsnYgSRtNrAS9S4/1hEFNCPktoLEIizL2zjHAnGC5AY0EXWnXnAEM
+&gt; AK2FOr7Oc0lsPcZjw4oCYz7lbFlctYAcULF2oVCn4esaUlWTu79A7AI5bhBiR+xQ
+&gt; ldGOoM4W3WZQAptW4BIwqK6Yj14ERgYgYeJcBoKJcfvyNZBbFNGvvOdyThLWkEy+
+&gt; 9zOmLxDgYHEDp2EGpL54gQP/LllkIvudQFskzkPlLBh/gEwRZkYodm7tFxdYBrF9
+&gt; HdlRWaWRy6YhKKpEoJbuXAujmJxpnOHsngA6g97UaTYXlhXSmIsWfG9g+GGiTPHO
+&gt; T6laGA0V6gOTlmr6zWIQxCBFtUg9dbqKiMMY6ACH8PNr74ITYjziT/7MMT/i30fs
+&gt; R8LzzmRkglXWvj76DYtjXGh4reLttx/PflOTsqLsYdOW6VbEiZMaQd2dtuJioD6l
+&gt; l717jD8vB+RXa6BczT8PMVthxeTK2aUGsP0EZvoSRneTvNQJu7tNf0mhbEWJJ1/V
+&gt; UNaroQK77fH5Ys8PKFlcVOdrnb9NhSXFyL6pqzF+RS2b5FWYgibYr2tMu+2go8iU
+&gt; MwARAQABiQG2BBgBCgAgFiEE6MCSrJZ01Xj8qQUR7jygYt/hs/wFAl1p15wCGwwA
+&gt; CgkQ7jygYt/hs/yc7QwAuD/WyT7WoctM+U9tQLUB8+a1IXSJBiuEgYg+H+ZGfpZN
+&gt; Urqij+4kuic1XdHHZXqa19i8nx5JbvYg2e04MRevfg1KziayHaCv5ETdUEyiRB6K
+&gt; 5CHooUdm0xBeD2CuQqbQ0A4GFhcHDbRe4mGG6EQIwDGC70Z/6PMP+xfbPMf6EoN+
+&gt; eyEnyraixJRwDxIzoKhFjRI3CaQGWuZUQJw+vOx4m4oLJDNtsohR2E3Dvrk0fsWh
+&gt; 7vHdbZTaNDgiEB+TBdiZsSpAxiSKoKom7SBCyfWQQ/FdpjW0INiGQUpmJzLEi9RY
+&gt; GXtCnh8BolwpYc76Cjp3Fcu3ZChJ02Odt2VXjZzgCU/99TyrVVs9hnILlDkPjxdk
+&gt; cFPpBADhFokUEW/uCUFBO6CnCoufW3h5kiMTvsGZ70Pi/W1FJPdEqoB/IxdqVIpL
+&gt; /rZHdlbP3DTQAuXM+CL8O+XgavzWySrX+Kd4Vsc+eUFdaY1TmzvTQYURSCwO1u4c
+&gt; io74Pok1FWazuouSf0N6
+&gt; =4055
+&gt; -----END PGP PUBLIC KEY BLOCK-----                                
+&gt; EOF
+gpg: key EE3CA062DFE1B3FC: "Epic Cash &lt;epiccash@brickabode.com&gt;" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+$
+</pre></div>
+            </div>
+        </div>
+    </div>
