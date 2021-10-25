@@ -18,7 +18,7 @@ body {
 #wrap {
 	min-height:100%; 
 	position:relative;
-    background: #0d0d0d;
+    background: #797272;
 }
 
 // Header
@@ -1192,6 +1192,10 @@ footer {
                                     color: $gold;
                                     display: inline-block;
                                 }
+                            }
+                            ul li {
+                                font-size: 1rem;
+                                color: $medium;
                             }
                         }
                     }
