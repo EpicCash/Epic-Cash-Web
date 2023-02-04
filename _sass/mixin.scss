@@ -29,7 +29,7 @@
 }
 
 @mixin nav-position($position) {
-	width: 14rem;
+	width: 0;
     position: fixed;
     overflow-y: auto;
     background-color: #222227;

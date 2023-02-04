@@ -1155,6 +1155,30 @@ footer {
                             i {
                                 vertical-align: middle;
                             }
+                            i.android svg {
+                                width: 1.3rem;
+                                height: 1.3rem;
+                                fill: #bababc;
+                                @media screen and (max-width: 30rem) {
+                                    fill: $gold;
+                                }
+                            }
+                            i.apple svg {
+                                width: 1.3rem;
+                                height: 1.3rem;
+                                fill: #bababc;
+                                @media screen and (max-width: 30rem) {
+                                    fill: $gold;
+                                }
+                            }
+                        }
+                        a:hover, a:active, a:focus {
+                            i.android svg {
+                                fill: #D1A55C;
+                            }
+                            i.apple svg {
+                                fill: #D1A55C;
+                            }
                         }
                     }
                     &.med-dark {
@@ -1374,6 +1398,15 @@ footer {
                     vertical-align: middle;
                     margin-right: 0.3rem;
                     color: $gold;
+                }
+                i.insta {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    background-image: url(../img/instagram-logo.svg);
+                    background-size: 1.5rem;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    margin-right: 0;
                 }
             }
             .col.ghost {
