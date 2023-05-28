@@ -3,12 +3,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 	<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-	<meta name="description" content="">
+	<meta name="description" content="{%if page.meta_description %}{{ page.meta_description }}{% else %}{{  }}{% endif %}">
 	<meta name="keywords" content="">
-	<meta property="og:title" content="">
-	<meta property="og:type" content="">
-	<meta property="og:url" content="">
-	<meta property="og:image" content="">
+	<meta property="og:title" content="{%if page.og_title %}{{ page.og_title }}{% else %}{{ page.title }}{% endif %}">
+	<meta property="og:description" content="{%if page.og_description %}{{ page.og_description }}{% else %}{{ page.meta_description }}{% endif %}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{%if page.og_url %}{{ page.og_url }}{% else %}{{ page.url }}{% endif %}">
 	<meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Epic Cash - {{page.title}}">
     <meta name="twitter:image" content="https://epic.tech{{ page.image }}">

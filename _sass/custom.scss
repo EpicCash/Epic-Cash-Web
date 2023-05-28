@@ -903,6 +903,16 @@ footer {
     }
 }
 
+#home-footer-fp {
+    p {
+        color: $dark;
+        font-size: 0.875rem;
+        position: absolute;
+        bottom: 0;
+        width: 85%;
+    }
+}
+
 // Sample page
 
 .content {
