@@ -6,22 +6,21 @@
 <body>
 	<div id="wrap">
 
-      <!-- Header -->
-      {% if site.custom_header == true %}
-        {% include header-custom.html %}
-      {% else %}
-        {% include header.html %}
-      {% endif %}
+        <!-- Header -->
+        {% if site.custom_header == true %}
+            {% include header-custom.html %}
+        {% else %}
+            {% include header.html %}
+        {% endif %}
 
-    <!-- Main content -->
-
-			{{ content }}
+        <!-- Main content -->
+        {{ content }}
 	    
 	    <!-- Footer -->
 	    {% include footer.html %}
 
 	    <!-- Script -->
-      {% include script.html %}
+        {% include script.html %}
 
 	</div>
 </body>
